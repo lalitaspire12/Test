@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<!-- Selector: Tag Name -->
+<div id="demo1">
+<button type="button" onclick="changeTextByTagName('button')">Click Me! (Tag Name)</button>
+</div>
+
+<!-- Selector: Class Name -->
+<div id="demo2">
+<button type="button" class="myButton" onclick="changeTextByClassName('myButton')">Click Me! (Class Name)</button>
+</div>
+
+<!-- Selector: Query Selector -->
+<div id="demo3">
+<button type="button" onclick="changeTextByQuerySelector('#demo3 button')">Click Me! (Query Selector)</button>
+</div>
+
+<!-- Selector: ID -->
+<div id="demo4">
+<button type="button" onclick="changeTextByID('demo4')">Click Me! (ID)</button>
+</div>
+
+<script>
+// Function for Tag Name Selector
+function changeTextByTagName(tagName) {
+var element = document.getElementsByTagName(tagName)[0];
+if (element) {
+element.innerHTML = "Hello JavaScript (Tag Name)";
+}
+}
+
+// Function for Class Name Selector
+function changeTextByClassName(className) {
+var element = document.getElementsByClassName(className)[0];
+if (element) {
+element.innerHTML = "Hello JavaScript (Class Name)";
+}
+}
+
+// Function for Query Selector
+function changeTextByQuerySelector(selector) {
+var element = document.querySelector(selector);
+if (element) {
+element.innerHTML = "Hello JavaScript (Query Selector)";
+}
+}
+
+// Function for ID Selector
+function changeTextByID(selector) {
+var element = document.getElementById(selector);
+if (element) {
+element.innerHTML = "Hello JavaScript (ID)";
+}
+}
+</script>
+
+</body>
+
+</html>
+
+
+
